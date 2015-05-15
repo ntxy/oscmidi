@@ -1,6 +1,5 @@
 TouchOSC to MIDI Bridge
 
-    python touchosc,py --help
     usage: touchmidi.py [-h] [--ip IP] [--port PORT] [--midi MIDI]
     
     optional arguments:
