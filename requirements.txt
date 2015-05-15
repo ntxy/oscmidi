@@ -1,0 +1,2 @@
+python-osc==1.4.2
+python-rtmidi==0.5b1
