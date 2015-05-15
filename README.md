@@ -3,9 +3,15 @@
 Recieves OSC and sends control change MIDI.
 Intended as simple solution for TouchOSC on Linux.
 
+    
+
 * The first MIDI byte is always 'control change' 176 or 0xB0.
+
 * OSC addresses are uniquely mapped to the second MIDI byte.
-* The third byte is the first value of the OSC message.
+This is done on the fly as OSC messages are recieved. To get consistent mappings you have to trigger the controls in the same order. '/ping' is always mapped to 0.
+
+* The third byte is the first value of the OSC message multiplied by 127 and rounded.
+
 
 explodes if u use more than 127 different controls in TouchOSC.
 
