@@ -9,11 +9,11 @@ import send_midi
 if __name__ == "__main__":
   parser = argparse.ArgumentParser()
   parser.add_argument("--ip",
-      default="0.0.0.0", help="The ip to listen on")
+      default="0.0.0.0", help="The ip to listen on (default=0.0.0.0)")
   parser.add_argument("--port",
-      type=int, default=5005, help="The port to listen on")
+      type=int, default=5005, help="The port to listen on (default=5005)")
   parser.add_argument("--midi",
-      type=int, default=0, help="The MIDI device index")
+      type=int, default=0, help="The MIDI device index (default=0)")
   args = parser.parse_args()
 
   midistuff = send_midi.MidiStuff(args.midi)
