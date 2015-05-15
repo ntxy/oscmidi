@@ -21,7 +21,8 @@ class MidiStuff(object):
         if address not in self.mapping:
             self.mapping[address] = len(self.mapping)
 
-        control_change = [0xB0, self.mapping[address], args[0] if args else 0]
+        control_change = [0xB0, self.mapping[address],
+                          round(args[0]*127) if args else 0]
         self.midiout.send_message(control_change)
         print(address, args, " ==> ", control_change)
 
