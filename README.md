@@ -28,8 +28,8 @@ Intended as simple solution for TouchOSC on Linux.
         --port PORT         The port to listen on (default=5005)
         --midi MIDI         The MIDI device index (default=0)
         --mapping-file-in MAPPING_FILE_IN
-                            File to read for the OSC to MIDI mapping
+                            File to read for the OSC to MIDI mapping (default=mapping.json)
         --mapping-file-out MAPPING_FILE_OUT
-                            File for saving the mapping
+                            File for saving the mapping (default=mapping.json)
         --no-learn            Map new OSC paths to MIDI
 
