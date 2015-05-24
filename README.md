@@ -7,13 +7,10 @@ Intended as simple solution for TouchOSC on Linux.
 
 * The first MIDI byte is always 'control change' 176 or 0xB0.
 
-* OSC addresses are uniquely mapped to the second MIDI byte.
-This is done on the fly as OSC messages are recieved. To get consistent mappings you have to trigger the controls in the same order. '/ping' is always mapped to 0.
+* OSC addresses are uniquely mapped to the second MIDI byte. This can be done on the fly or from a mapping file. The mapping is written to disk when the program exits. '/ping' is always mapped to 0.
 
 * The third byte is the first value of the OSC message multiplied by 127 and rounded.
 
-
-explodes if u use more than 127 different controls in TouchOSC.
 
 ### Installation
 
@@ -21,11 +18,18 @@ explodes if u use more than 127 different controls in TouchOSC.
     
 ### Usage
 
-    > python touchmidi.py [-h] [--ip IP] [--port PORT] [--midi MIDI]
-    
+    usage: touchmidi.py [-h] [--ip IP] [--port PORT] [--midi MIDI]
+                    [--mapping-file-in MAPPING_FILE_IN]
+                    [--mapping-file-out MAPPING_FILE_OUT] [--no-learn]
+
     optional arguments:
-      -h, --help   show this help message and exit
-      --ip IP      The ip to listen on
-      --port PORT  The port to listen on
-      --midi MIDI  The MIDI device index
+        -h, --help          show this help message and exit
+        --ip IP             The ip to listen on (default=0.0.0.0)
+        --port PORT         The port to listen on (default=5005)
+        --midi MIDI         The MIDI device index (default=0)
+        --mapping-file-in MAPPING_FILE_IN
+                            File to read for the OSC to MIDI mapping
+        --mapping-file-out MAPPING_FILE_OUT
+                            File for saving the mapping
+        --no-learn            Map new OSC paths to MIDI
 
