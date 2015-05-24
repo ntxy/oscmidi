@@ -78,10 +78,10 @@ if __name__ == "__main__":
                         help="The MIDI device index (default=0)")
     parser.add_argument("--mapping-file-in",
                         default="mapping.json",
-                        help="File to read for the OSC to MIDI mapping")
+                        help="File to read for the OSC to MIDI mapping (default=mapping.json)")
     parser.add_argument("--mapping-file-out",
                         default="mapping.json",
-                        help="File for saving the mapping")
+                        help="File for saving the mapping (default=mapping.json)")
     parser.add_argument("--no-learn",
                         action="store_true",
                         help="Map new OSC paths to MIDI")
