@@ -1,4 +1,4 @@
-## TouchOSC to MIDI Bridge
+## OSC to MIDI Bridge
 
 Recieves OSC and sends control change MIDI.
 Intended as simple solution for TouchOSC on Linux.
@@ -18,7 +18,7 @@ Intended as simple solution for TouchOSC on Linux.
     
 ### Usage
 
-    usage: touchmidi.py [-h] [--ip IP] [--port PORT] [--midi MIDI]
+    usage: oscmidi.py [-h] [--ip IP] [--port PORT] [--midi MIDI]
                     [--mapping-file-in MAPPING_FILE_IN]
                     [--mapping-file-out MAPPING_FILE_OUT] [--no-learn]
 
